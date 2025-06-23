@@ -1,0 +1,9 @@
+<bot>
+    <action limb="create_file">
+        <path>newfile.txt</path>
+    </action>
+    <action limb="write_file">
+        <path>newfile.txt</path>
+        <content>Hello, world!</content>
+    </action>
+</bot> 

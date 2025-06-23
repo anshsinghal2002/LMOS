@@ -1,0 +1,6 @@
+<bot>
+    <action limb="backup_folder">
+        <src>my_folder</src>
+        <dst>my_folder_backup</dst>
+    </action>
+</bot> 

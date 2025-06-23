@@ -1,0 +1,6 @@
+<bot>
+    <action limb="rename_file">
+        <src>example.txt</src>
+        <dst>renamed_example.txt</dst>
+    </action>
+</bot> 
