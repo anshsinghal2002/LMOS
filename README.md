@@ -98,3 +98,6 @@ A modular automation framework where “bots” execute “limbs” (executable 
     - Bots persist in a synchronized runtime and communicate via a topic/subscriber model.
 - **Intelligent Automation:**
     - Integration of LLMs enables context-aware, adaptive, and scalable automation.
+
+
+  python lmos/main.py lmos/launch_files/rename_file.xml
