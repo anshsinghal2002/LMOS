@@ -1,9 +1,25 @@
-<bot>
-    <action limb="create_file">
-        <path>newfile.txt</path>
-    </action>
-    <action limb="write_file">
-        <path>newfile.txt</path>
-        <content>Hello, world!</content>
-    </action>
-</bot> 
+<launch>
+    <limbs>
+        <limb name="create_file">
+            <param name="default_extension">.txt</param>
+        </limb>
+        <limb name="write_file">
+            <param name="encoding">utf-8</param>
+        </limb>
+    </limbs>
+    <logic_sequence>
+        <condition>
+            <action limb="create_file">
+                <filename>newfile.txt</filename>
+                <time>2024-06-01T12:10:00</time>
+            </action>
+        </condition>
+        <condition>
+            <action limb="write_file">
+                <filename>newfile.txt</filename>
+                <content>Hello, world!</content>
+                <time>2024-06-01T12:11:00</time>
+            </action>
+        </condition>
+    </logic_sequence>
+</launch> 

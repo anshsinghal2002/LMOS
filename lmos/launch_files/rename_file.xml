@@ -1,6 +1,14 @@
-<bot>
-    <action limb="rename_file">
-        <src>example.txt</src>
-        <dst>renamed_example.txt</dst>
-    </action>
-</bot> 
+<launch>
+    <limbs>
+        <limb name="rename_file"/>
+    </limbs>
+    <logic_sequence>
+        <condition>
+            <action limb="rename_file">
+                <src>example.txt</src>
+                <dst>renamed_example.txt</dst>
+                <time>2024-06-01T12:00:00</time>
+            </action>
+        </condition>
+    </logic_sequence>
+</launch> 

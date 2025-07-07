@@ -19,16 +19,8 @@ EXAMPLE_LAUNCH_FILES = [
     'launch_files/create_and_write_file.xml',
 ]
 
-def get_limbs_for_xml(xml_path):
-    import xml.etree.ElementTree as ET
-    tree = ET.parse(xml_path)
-    root = tree.getroot()
-    limb_names = set(action.get('limb') for action in root.findall('action'))
-    return [LIMB_CLASSES[name]() for name in limb_names if name in LIMB_CLASSES]
-
 def main(xml_path):
-    limbs = get_limbs_for_xml(xml_path)
-    bot = BasicBot(limbs, xml_path)
+    bot = BasicBot(xml_path, LIMB_CLASSES)
     bot.execute_sequence()
 
 if __name__ == '__main__':
